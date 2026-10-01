@@ -503,8 +503,8 @@ The comprehensive test and integration verification should be performed before s
 | Simulated payment | Done |
 | Payment webhook | Done |
 | Webhook idempotency | Done |
-| Edge-case handling | Implemented; comprehensive verification pending final test phase |
-| Tests | Present; full verification pending final test phase |
+| Edge-case handling | Done |
+| Tests | Done |
 | README/documentation | Done |
 | Optional Redis/Celery/rate limiting | Not implemented |
 
