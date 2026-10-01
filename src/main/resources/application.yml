@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: diagnostics
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/diagnostics
+    username: postgres
+    password: Sumit@2004
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate.jdbc.time_zone: UTC
+
+  flyway:
+    enabled: true
+
+  jackson:
+    default-property-inclusion: non_null
+
+app:
+  jwt:
+    secret: 7fK9mQ2xV8pL4sN6zR3tY1wE5uI0oP8aC6dG9hJ2kF4mX7qB
+    expiration-minutes: 60
+
+  webhook:
+    secret: V3nR8kP2mL6xQ9sT4wZ7cH1jF5dA0gY8uI2oE6bN9rK
+
+  payment:
+    success-rate: 0.8
+
+  booking:
+    zone: Asia/Kolkata
+
+  admin:
+    email: admin@gmail.com
+    password: admin@1234
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+logging:
+  pattern:
+    console: "%d{ISO8601} %-5level [%X{requestId:-}] %logger{36} - %msg%n"
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
